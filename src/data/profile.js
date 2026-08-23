@@ -32,7 +32,7 @@ export const HERO_INFO_CARDS = [
 
 export const SOCIAL_LINKS = {
   github: "https://github.com/bimalrijal56-oss",
-  linkedin: "https://linkedin.com/in/your-username",
+  linkedin: "https://www.linkedin.com/in/bimal-rijal-514854430/",
   whatsapp: "https://wa.me/9779867428466",
   email: "https://mail.google.com/mail/?view=cm&fs=1&to=bimalrijal56@gmail.com",
 };

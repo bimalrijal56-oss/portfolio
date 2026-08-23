@@ -14,7 +14,7 @@ export default function ProjectCard({ project }) {
         <img src={imageSrc} alt={`${title} project preview`} loading="lazy" />
       </div>
 
-      <div className="project-body">
+      <div className="project-body"data-aos="fade-up">
         <h3 className="project-title">{title}</h3>
         <p className="project-desc">{description}</p>
 

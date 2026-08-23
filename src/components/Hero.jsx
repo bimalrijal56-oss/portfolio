@@ -38,7 +38,7 @@ export default function Hero() {
               />
             </div>
 
-            <div className="hero-rings-photo">
+            <div className="hero-rings-photo"data-aos="fade-up">
               <img
                 src="/images/hero-img.jpeg"
                 alt="Portrait of Bimal Rijal, Full-Stack Developer"
@@ -60,7 +60,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero-content">
+        <div className="hero-content"data-aos="fade-up">
           <span className="eyebrow">Full-Stack Developer</span>
           <h1 className="hero-name">{PROFILE.name}</h1>
           <h2 className="hero-tagline text-accent">{PROFILE.tagline}</h2>
