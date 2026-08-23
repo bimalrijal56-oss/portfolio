@@ -1,0 +1,26 @@
+.section-title {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.section-title-center {
+  align-items: center;
+  text-align: center;
+}
+
+.section-title-left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.section-title h2 {
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+}
+
+.section-title-desc {
+  max-width: 560px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}

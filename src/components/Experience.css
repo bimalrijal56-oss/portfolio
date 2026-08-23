@@ -1,0 +1,99 @@
+.experience-timeline {
+  margin-top: 3rem;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--accent-primary), transparent 90%);
+  opacity: 0.4;
+}
+
+.experience-item {
+  position: relative;
+  padding: 1.6rem 1.8rem;
+}
+
+.experience-marker {
+  position: absolute;
+  left: -2rem;
+  top: 1.9rem;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.experience-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.experience-head h3 {
+  font-size: 1.15rem;
+}
+
+.experience-duration {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  letter-spacing: 0.03em;
+}
+
+.experience-company {
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+
+.experience-desc {
+  margin-top: 0.75rem;
+  font-size: 0.92rem;
+}
+
+.experience-tech {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.experience-tech li {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  background: var(--accent-soft);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-pill);
+  padding: 0.25rem 0.7rem;
+}
+
+@media (max-width: 560px) {
+  .experience-timeline {
+    padding-left: 1.5rem;
+  }
+
+  .experience-item {
+    padding: 1.3rem;
+  }
+
+  .experience-marker {
+    left: -1.5rem;
+  }
+}
