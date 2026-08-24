@@ -49,15 +49,15 @@
   align-items: center;
   justify-content: center;
   background: #04080e;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 0 14px rgba(46, 204, 143, 0.16);
+  border: 1px solid var(--border-neutral);
+  box-shadow: none;
   flex-shrink: 0;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
 }
 
 .navbar-logo:hover .logo-image {
-  border-color: var(--accent-primary);
-  box-shadow: var(--shadow-glow-sm);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: none;
   transform: scale(1.04);
 }
 

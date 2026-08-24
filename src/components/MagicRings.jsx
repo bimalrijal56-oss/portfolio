@@ -107,7 +107,14 @@ export default function MagicRings({
 
     let renderer;
     try {
-      renderer = new THREE.WebGLRenderer({ alpha: true });
+      renderer = new THREE.WebGLRenderer({
+        alpha: true,
+        powerPreference: "high-performance",
+        antialias: false,
+        depth: false,
+        stencil: false,
+        preserveDrawingBuffer: false,
+      });
     } catch {
       return;
     }
@@ -156,7 +163,7 @@ export default function MagicRings({
     const resize = () => {
       const w = mount.clientWidth;
       const h = mount.clientHeight;
-      const dpr = Math.min(window.devicePixelRatio, 2);
+      const dpr = Math.min(window.devicePixelRatio, 1.25);
       renderer.setSize(w, h);
       renderer.setPixelRatio(dpr);
       uniforms.uResolution.value.set(w * dpr, h * dpr);

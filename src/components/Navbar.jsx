@@ -5,14 +5,26 @@ import { scrollToSection } from "../utils/helpers";
 import { useScrollSpy } from "../hooks/useScrollSpy";
 import "./Navbar.css";
 
+const SECTION_IDS = NAV_LINKS.map((link) => link.href);
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const activeId = useScrollSpy(NAV_LINKS.map((link) => link.href));
+  const activeId = useScrollSpy(SECTION_IDS);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 24);
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 24);
+          ticking = false;
+        });
+      }
+    };
     window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 

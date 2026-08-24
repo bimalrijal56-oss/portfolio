@@ -30,20 +30,18 @@
   gap: 0.85rem;
 }
 
-.footer-logo {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  border: 1px solid var(--border-color-strong);
-  background: var(--accent-soft);
-  color: var(--accent-primary);
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.1rem;
-  display: inline-flex;
+.footer-brand .logo-image {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  display: flex;
   align-items: center;
   justify-content: center;
+  background: #04080e;
+  border: 1px solid var(--border-neutral);
+  box-shadow: none;
+  flex-shrink: 0;
 }
 
 .footer-brand h3 {
