@@ -32,6 +32,17 @@ export default function Experience() {
                   <span className="experience-duration">{role.duration}</span>
                 </div>
                 <p className="experience-company">{role.company}</p>
+                {role.companyUrl && (
+                  <a
+                    href={role.companyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="experience-company-link"
+                  >
+                    <span>Visit {role.company}</span>
+                    <i className="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                  </a>
+                )}
                 <p className="experience-desc">{role.description}</p>
 
                 <ul className="experience-tech">
