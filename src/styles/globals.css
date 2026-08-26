@@ -131,6 +131,10 @@ select:focus-visible {
 
 /* Buttons */
 .btn {
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-border-color: transparent;
+  --bs-btn-focus-box-shadow: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -140,33 +144,98 @@ select:focus-visible {
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 0.92rem;
-  border: 1px solid transparent;
+  border: 1px solid transparent !important;
+  text-decoration: none;
+  cursor: pointer;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast),
-    background var(--transition-fast), color var(--transition-fast);
+    background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
 }
 
-.btn-primary {
+.btn:focus,
+.btn:focus-visible,
+.btn:active,
+.btn.active {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary.active,
+.show > .btn-primary.dropdown-toggle {
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-bg: transparent;
+  --bs-btn-active-border-color: transparent;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: transparent;
   background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-  color: #04120c;
+  color: #04120c !important;
+  border: 1px solid transparent !important;
+  border-color: transparent !important;
 }
 
 .btn-primary:hover {
+  background: linear-gradient(135deg, #34d399, var(--accent-primary));
   box-shadow: var(--shadow-glow-md);
   transform: translateY(-2px);
-  color: #04120c;
+  color: #04120c !important;
+  border-color: transparent !important;
 }
 
-.btn-outline {
+.btn-primary:focus,
+.btn-primary:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+  box-shadow: var(--shadow-glow-sm);
+  color: #04120c !important;
+  border-color: transparent !important;
+}
+
+.btn-primary:active,
+.btn-primary.active {
+  background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+  transform: translateY(0);
+  color: #04120c !important;
+  border-color: transparent !important;
+  box-shadow: none;
+}
+
+.btn-outline,
+.btn-outline:visited {
   background: transparent;
   color: var(--text-primary);
-  border-color: var(--border-color-strong);
+  border: 1px solid var(--border-color-strong) !important;
+  border-color: var(--border-color-strong) !important;
 }
 
 .btn-outline:hover {
-  border-color: var(--accent-primary);
+  background: var(--accent-soft);
+  border-color: var(--accent-primary) !important;
   box-shadow: var(--shadow-glow-sm);
   transform: translateY(-2px);
   color: var(--text-primary);
+}
+
+.btn-outline:focus,
+.btn-outline:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+  border-color: var(--accent-primary) !important;
+  color: var(--text-primary);
+}
+
+.btn-outline:active,
+.btn-outline.active {
+  background: var(--accent-soft);
+  transform: translateY(0);
+  color: var(--text-primary);
+  border-color: var(--accent-primary) !important;
 }
 
 /* Background atmosphere: high-tech glowing wave + radial glow + particles across all pages */
