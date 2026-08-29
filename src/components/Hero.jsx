@@ -40,7 +40,7 @@ export default function Hero() {
 
             <div className="hero-rings-photo"data-aos="fade-up">
               <img
-                src="/images/hero-img.jpeg"
+                src="/images/mypic.jpeg"
                 alt="Portrait of Bimal Rijal, Full-Stack Developer"
               />
             </div>
