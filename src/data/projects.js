@@ -27,4 +27,13 @@ export const PROJECTS = [
     github: "https://github.com/bimalrijal56-oss/Astrokali",
     live: "https://www.astrokaali.com/",
   },
+  {
+    title: "Khojbazaar",
+    description:
+      "A multiuser ecommerce website for both vendors and customers.",
+    image: "images/Khojbazaar.png",
+    technologies: ["Django REST Framework", "PostgreSQL"],
+    github: "https://github.com/bimalrijal56-oss/Khojbazaar",
+    live: "https://khojbazaar.onrender.com",
+  },
 ];
